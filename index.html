@@ -46,21 +46,29 @@
       <div class="row">
         <p class="flow-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
       </div>
-      <div class="row">
-        <div class="input-field col s6 offset-l2">
-          <input id="address" type="text">
-          <label for="address">Your address</label>
-        </div>
-        <div class="col s6 l4">
-          <a class="waves-effect waves-light btn-large red" href="#">Find your representatives</a>
-        </div>
-      </div>
+      <!-- Social media -->
       <div class="row center">
         <h4>Post on Twitter and Facebook - #DemilitarizeDC</h4>
       </div>
       <div class="row center">
         <a class="waves-effect waves-light btn-large red" href="#">Twitter</a>
         <a class="waves-effect waves-light btn-large red" href="#">Facebook</a>
+      </div>
+
+      <!-- Find your representative -->
+      <div class="row">
+        <div class="input-field col s6 offset-l2">
+          <input id="address" type="text">
+          <label for="address">Your address</label>
+        </div>
+        <div class="col s6 l4">
+          <a class="waves-effect waves-light btn-large red" id="findRepresentatives">Find your representatives</a>
+        </div>
+      </div>
+
+      <!-- Representative list -->
+      <div class="row" id="representativeList">
+
       </div>
     </div>
   </div>
@@ -86,13 +94,11 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
   <!-- app.js -->
-  <script src="js/app.js">
-    
-  </script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
 
   </body>
 </html>

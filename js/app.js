@@ -1,3 +1,6 @@
+// Init UI
+const ui = new UI();
+
 // Set milliseconds per day constant
 const _MS_PER_DAY = 1000 * 60 * 60 *24
 
@@ -31,3 +34,27 @@ document.getElementById('january-6').textContent = jan6Diff.toString();
 document.getElementById('january-20').textContent = jan20Diff.toString();
 document.getElementById('february-9').textContent = feb9Diff.toString();
 document.getElementById('march-4').textContent = mar4Diff.toString();
+
+// EasyHTTP class
+class EasyHTTP {
+  async get(url) {
+    const response = await fetch(url);
+    const resData = await response.json();
+    return resData;
+  };
+}
+
+// Get representative information
+const apiKey = 'AIzaSyA0bOMkrZ4gSkm-YIx1Wd0kxQcZiR2hQ5w';
+const http = new EasyHTTP;
+
+// Listen for find representative event
+document.querySelector('#address').addEventListener('click', findRepresentatives)
+
+// Find representatives
+function findRepresentatives() {
+  const address = document.getElementById('address').value;
+  http.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&address=${address}`)
+  .then(data => ui.showRepresentatives(data.officials))
+  .catch(err => console.log(data));
+}
