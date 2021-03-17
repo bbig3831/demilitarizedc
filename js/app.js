@@ -49,12 +49,27 @@ const apiKey = 'AIzaSyA0bOMkrZ4gSkm-YIx1Wd0kxQcZiR2hQ5w';
 const http = new EasyHTTP;
 
 // Listen for find representative event
-document.querySelector('#address').addEventListener('click', findRepresentatives)
+document.querySelector('#findRepresentatives').addEventListener('click', findRepresentatives);
+
+// Listen for modals
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.modal');
+  var instances = M.Modal.init(elems, options);
+});
 
 // Find representatives
 function findRepresentatives() {
   const address = document.getElementById('address').value;
   http.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&address=${address}`)
   .then(data => ui.showRepresentatives(data.officials))
-  .catch(err => console.log(data));
+  .catch(err => console.log(err));
 }
+
+// Set Twitter href
+let twitterText = `
+  ${jan6Diff.toString()} days since January 6th
+  ${jan20Diff.toString()} days since the Inauguration
+  No end in sight for the Capitol fence
+`;
+let twitterBaseUrl = `http://twitter.com/share?text=${twitterText}&hashtags=DemilitarizeDC`;
+document.getElementById('twitterButton').href = twitterBaseUrl;
