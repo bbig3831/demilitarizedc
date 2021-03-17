@@ -51,12 +51,12 @@
         <h4>Post on Twitter and Facebook - #DemilitarizeDC</h4>
       </div>
       <div class="row center">
-        <a class="waves-effect waves-light btn-large red" href="#">Twitter</a>
-        <a class="waves-effect waves-light btn-large red" href="#">Facebook</a>
+        <a class="waves-effect waves-light btn-large red" id="twitterButton" href="#">Twitter</a>
+        <a class="waves-effect waves-light btn-large red" id="facebookButton" href="#">Facebook</a>
       </div>
 
       <!-- Find your representative -->
-      <div class="row">
+      <div class="row center">
         <div class="input-field col s6 offset-l2">
           <input id="address" type="text">
           <label for="address">Your address</label>
@@ -67,8 +67,12 @@
       </div>
 
       <!-- Representative list -->
-      <div class="row" id="representativeList">
+      <div class="row center" id="representativeList">
 
+      </div>
+      <div class="row center">
+        <!-- Modal Trigger -->
+        <a class="waves-effect waves-light btn btn-large red modal-trigger" href="#modal1">Form letter</a>
       </div>
     </div>
   </div>
@@ -92,9 +96,20 @@
     </div>
   </footer>
 
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="js/materialize.js"></script>
   <!-- app.js -->
   <script src="js/ui.js"></script>
