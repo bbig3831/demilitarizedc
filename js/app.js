@@ -66,10 +66,15 @@ function findRepresentatives() {
 }
 
 // Set Twitter href
-let twitterText = `
+let text = `
   ${jan6Diff.toString()} days since January 6th
   ${jan20Diff.toString()} days since the Inauguration
-  No end in sight for the Capitol fence
+  ${feb9Diff.toString()} days since the start of the impeachment trial
+  Tear down the Capitol fence!
 `;
-let twitterBaseUrl = `http://twitter.com/share?text=${twitterText}&hashtags=DemilitarizeDC`;
-document.getElementById('twitterButton').href = twitterBaseUrl;
+let twitterUrl = `https://twitter.com/share?text=${text}&hashtags=DemilitarizeDC`;
+document.getElementById('twitterButton').href = twitterUrl;
+
+// Set Facebook href
+let facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=example.org`;
+document.getElementById('facebookButton').href = facebookUrl;
