@@ -1,6 +1,39 @@
 // Init UI
 const ui = new UI();
 
+// Set states for state dropdown
+const states = {
+  'AL': {
+    'name': 'Alabama',
+    'ngUrl': 'https://al.ng.mil/'
+  },
+  'VA': {
+    'name': 'Virginia',
+    'ngUrl': 'https://va.ng.mil/'
+  },
+  'WY': {
+    'name': 'Wyoming',
+    'ngUrl': 'https://www.wyomilitary.wyo.gov/guard/army/'
+  }
+};
+
+// Set states for dropdown
+function initDropdownList(stateDict) {
+
+  // Get dropdown element
+  select = document.getElementById('stateSelect');
+
+  // Create options
+  for (const [stateCode, properties] of Object.entries(stateDict)) {
+    var opt = document.createElement('option');
+    opt.value = stateCode;
+    opt.innerHTML = properties.name;
+    select.appendChild(opt);
+  }
+};
+
+initDropdownList(states);
+
 // Set milliseconds per day constant
 const _MS_PER_DAY = 1000 * 60 * 60 *24
 
@@ -51,16 +84,16 @@ const http = new EasyHTTP;
 // Listen for find representative event
 document.querySelector('#findRepresentatives').addEventListener('click', findRepresentatives);
 
-// Listen for modals
-document.addEventListener('DOMContentLoaded', function() {
-  var elems = document.querySelectorAll('.modal');
-  var instances = M.Modal.init(elems, options);
-});
-
 // Find representatives
 function findRepresentatives() {
+  // Get address components
   const address = document.getElementById('address').value;
-  http.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&address=${address}`)
+  const city = document.getElementById('city').value;
+  const state = document.getElementById('stateSelect').value;
+  const addressUri = encodeURIComponent(address.concat(', ', city, ', ', state));
+
+  // GET request to Google Civic Info API
+  http.get(`https://www.googleapis.com/civicinfo/v2/representatives?key=${apiKey}&levels=country&roles=legislatorLowerBody&roles=legislatorUpperBody&address=${addressUri}`)
   .then(data => ui.showRepresentatives(data.officials))
   .catch(err => console.log(err));
 }
