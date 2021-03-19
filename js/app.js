@@ -7,9 +7,213 @@ const states = {
     'name': 'Alabama',
     'ngUrl': 'https://al.ng.mil/'
   },
+  'AK': {
+    'name': 'Alaska',
+    'ngUrl': 'https://ak.ng.mil/'
+  },
+  'AZ': {
+    'name': 'Arizona',
+    'ngUrl': 'https://dema.az.gov/army-national-guard'
+  },
+  'AK': {
+    'name': 'Arkansas',
+    'ngUrl': 'https://arkansas.nationalguard.mil/'
+  },
+  'CA': {
+    'name': 'California',
+    'ngUrl': 'https://calguard.ca.gov/'
+  },
+  'CO': {
+    'name': 'Colorado',
+    'ngUrl': 'https://co.ng.mil/'
+  },
+  'CT': {
+    'name': 'Connecticut',
+    'ngUrl': 'https://ct.ng.mil/Pages/default.aspx'
+  },
+  'DE': {
+    'name': 'Delaware',
+    'ngUrl': 'https://www.de.ng.mil/'
+  },
+  'DC': {
+    'name': 'District of Columbia',
+    'ngUrl': 'https://dc.ng.mil/'
+  },
+  'FL': {
+    'name': 'Florida',
+    'ngUrl': 'https://fl.ng.mil/Pages/Home.aspx'
+  },
+  'GA': {
+    'name': 'Georgia',
+    'ngUrl': 'https://www.nationalguard.com/select-your-state/GA'
+  },
+  'GU': {
+    'name': 'Guam',
+    'ngUrl': 'https://www.nationalguard.com/select-your-state/USGU'
+  },
+  'HI': {
+    'name': 'Hawaii',
+    'ngUrl': 'http://dod.hawaii.gov/hiarng/'
+  },
+  'ID': {
+    'name': 'Idaho',
+    'ngUrl': 'https://www.imd.idaho.gov/idaho-army-national-guard/'
+  },
+  'IL': {
+    'name': 'Illinois',
+    'ngUrl': 'https://www.il.ngb.army.mil/'
+  },
+  'IN': {
+    'name': 'Indiana',
+    'ngUrl': 'https://www.in.ng.mil/'
+  },
+  'IA': {
+    'name': 'Iowa',
+    'ngUrl': 'https://www.iowanationalguard.com/'
+  },
+  'KS': {
+    'name': 'Kansas',
+    'ngUrl': 'http://www.kansastag.gov/'
+  },
+  'KY': {
+    'name': 'Kentucky',
+    'ngUrl': 'https://kentuckyguard.dodlive.mil/'
+  },
+  'LA': {
+    'name': 'Louisiana',
+    'ngUrl': 'https://geauxguard.la.gov/'
+  },
+  'ME': {
+    'name': 'Maine',
+    'ngUrl': 'https://www.me.ng.mil/'
+  },
+  'MD': {
+    'name': 'Maryland',
+    'ngUrl': 'https://military.maryland.gov/ng/'
+  },
+  'MA': {
+    'name': 'Massachusetts',
+    'ngUrl': 'https://www.massnationalguard.org/'
+  },
+  'MI': {
+    'name': 'Michigan',
+    'ngUrl': 'https://minationalguard.dodlive.mil/'
+  },
+  'MN': {
+    'name': 'Minnesota',
+    'ngUrl': 'https://minnesotanationalguard.ng.mil/'
+  },
+  'MS': {
+    'name': 'Mississippi',
+    'ngUrl': 'https://ms.ng.mil/'
+  },
+  'MO': {
+    'name': 'Missouri',
+    'ngUrl': 'https://www.moguard.ngb.mil/'
+  },
+  'MT': {
+    'name': 'Montana',
+    'ngUrl': 'https://montanaguard.net/'
+  },
+  'NE': {
+    'name': 'Nebraska',
+    'ngUrl': 'https://ne.ng.mil/'
+  },
+  'NV': {
+    'name': 'Nevada',
+    'ngUrl': 'https://nv.ng.mil/'
+  },
+  'NH': {
+    'name': 'New Hampshire',
+    'ngUrl': 'https://nh.ng.mil/'
+  },
+  'NJ': {
+    'name': 'New Jersey',
+    'ngUrl': 'https://www.nj.gov/military/guard/'
+  },
+  'NM': {
+    'name': 'New Mexico',
+    'ngUrl': 'https://www.dma.state.nm.us/'
+  },
+  'NY': {
+    'name': 'New York',
+    'ngUrl': 'http://www.dmna.state.ny.us/'
+  },
+  'NC': {
+    'name': 'North Carolina',
+    'ngUrl': 'https://nc.ng.mil/'
+  },
+  'ND': {
+    'name': 'North Dakota',
+    'ngUrl': 'https://www.ndguard.nd.gov/'
+  },
+  'OH': {
+    'name': 'Ohio',
+    'ngUrl': 'https://ong.ohio.gov/'
+  },
+  'OK': {
+    'name': 'Oklahoma',
+    'ngUrl': 'https://ok.ng.mil/'
+  },
+  'OR': {
+    'name': 'Oregon',
+    'ngUrl': 'https://www.oregon.gov/omd/ONG/'
+  },
+  'PA': {
+    'name': 'Pennsylvania',
+    'ngUrl': 'https://www.pa.ng.mil/'
+  },
+  'PR': {
+    'name': 'Puerto Rico',
+    'ngUrl': 'https://nationalguard.com/select-your-state/USPR'
+  },
+  'RI': {
+    'name': 'Rhode Island',
+    'ngUrl': 'https://ri.ng.mil/'
+  },
+  'SC': {
+    'name': 'South Carolina',
+    'ngUrl': 'https://www.scguard.ng.mil/'
+  },
+  'SD': {
+    'name': 'South Dakota',
+    'ngUrl': 'https://sd.ng.mil/'
+  },
+  'TN': {
+    'name': 'Tennessee',
+    'ngUrl': 'https://www.tn.gov/military/'
+  },
+  'TX': {
+    'name': 'Texas',
+    'ngUrl': 'https://tmd.texas.gov/state-guard'
+  },
+  'UT': {
+    'name': 'Utah',
+    'ngUrl': 'https://ut.ng.mil/'
+  },
+  'VT': {
+    'name': 'Vermont',
+    'ngUrl': 'https://vt.public.ng.mil/'
+  },
+  'VI': {
+    'name': 'Virgin Islands',
+    'ngUrl': 'https://vi.ng.mil/'
+  },
   'VA': {
     'name': 'Virginia',
     'ngUrl': 'https://va.ng.mil/'
+  },
+  'WA': {
+    'name': 'Washington',
+    'ngUrl': 'https://mil.wa.gov/army-guard'
+  },
+  'WV': {
+    'name': 'West Virginia',
+    'ngUrl': 'https://www.wv.ng.mil/'
+  },
+  'WI': {
+    'name': 'Wisconsin',
+    'ngUrl': 'https://dma.wi.gov/DMA/'
   },
   'WY': {
     'name': 'Wyoming',
