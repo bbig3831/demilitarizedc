@@ -103,6 +103,9 @@
     <div class="row center" id="representativeList">
     
     </div>
+    <!-- Modal Trigger -->
+    <button data-target="modal1" class="btn btn-large red modal-trigger">Modal</button>
+
 
     <!-- Contact the National Guard -->
     <div class="row">
@@ -136,12 +139,13 @@
 
   <!-- Modal Structure -->
   <div id="modal1" class="modal">
-    <div class="modal-content">
+    <div class="modal-content" id="modalFormLetter">
       <h4>Modal Header</h4>
       <p>A bunch of text</p>
     </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    <div class="modal-footer left">
+      <a href="#!" class="waves-effect waves-red red btn btn-medium" id="copyText"><i class="small material-icons">content_copy</i>  Copy</a>
+      <a href="#!" class="modal-close waves-effect waves-red red btn btn-medium">Close</a>
     </div>
   </div>
 

@@ -315,3 +315,21 @@ document.getElementById('twitterButton').href = twitterUrl;
 // Set Facebook href
 let facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=example.org`;
 document.getElementById('facebookButton').href = facebookUrl;
+
+// Copy form letter text from modal
+function copyRichText() {
+  let text = document.getElementById('modalFormLetter').innerText;
+  const listener = function(ev) {
+    ev.preventDefault();
+    ev.clipboardData.setData('text/html', text);
+    ev.clipboardData.setData('text/plain', text);
+  };
+  document.addEventListener('copy', listener);
+  document.execCommand('copy');
+  document.removeEventListener('copy', listener);
+};
+
+// Add event listener
+var copyButton = document.getElementById('copyText')
+document.querySelector('#copyText').addEventListener('click', copyRichText);
+
