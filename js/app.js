@@ -271,6 +271,18 @@ document.getElementById('january-6').textContent = jan6Diff.toString();
 document.getElementById('january-20').textContent = jan20Diff.toString();
 document.getElementById('february-9').textContent = feb9Diff.toString();
 document.getElementById('march-4').textContent = mar4Diff.toString();
+// Set date differences in modal
+Date.prototype.getMonthName = function() {
+  var monthNames = [ "January", "February", "March", "April", "May", "June", 
+                     "July", "August", "September", "October", "November", "December" ];
+  return monthNames[this.getMonth()];
+};
+const today = new Date();
+document.getElementById('todaysDate').textContent = today.getMonthName().concat(' ', today.getDate().toString(), ', ', today.getFullYear().toString());
+document.getElementById('january-6-modal').textContent = jan6Diff.toString();
+document.getElementById('january-20-modal').textContent = jan20Diff.toString();
+document.getElementById('february-9-modal').textContent = feb9Diff.toString();
+document.getElementById('march-4').textContent = mar4Diff.toString();
 
 // EasyHTTP class
 class EasyHTTP {
