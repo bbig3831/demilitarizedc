@@ -315,18 +315,12 @@ function findRepresentatives() {
 }
 
 // Set Twitter href
-let text = `
-  ${jan6Diff.toString()} days since January 6th
+let text = `${jan6Diff.toString()} days since January 6th
   ${jan20Diff.toString()} days since the Inauguration
   ${feb9Diff.toString()} days since the start of the impeachment trial
-  Tear down the Capitol fence!
-`;
+  Tear down the Capitol fence!`;
 let twitterUrl = `https://twitter.com/share?text=${text}&hashtags=DemilitarizeDC`;
 document.getElementById('twitterButton').href = twitterUrl;
-
-// Set Facebook href
-let facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=example.org`;
-document.getElementById('facebookButton').href = facebookUrl;
 
 // Copy form letter text from modal
 function copyRichText() {
