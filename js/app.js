@@ -299,6 +299,7 @@ const http = new EasyHTTP;
 
 // Listen for find representative event
 document.querySelector('#findRepresentatives').addEventListener('click', findRepresentatives);
+document.querySelector('#findRepresentatives').addEventListener('click', showNationalGuardInfo);
 
 // Find representatives
 function findRepresentatives() {
@@ -335,7 +336,29 @@ function copyRichText() {
   document.removeEventListener('copy', listener);
 };
 
-// Add event listener
-var copyButton = document.getElementById('copyText')
+// Add event listener for copy text
+var copyButton = document.getElementById('copyText');
 document.querySelector('#copyText').addEventListener('click', copyRichText);
 
+// Show state National Guard information
+function showNationalGuardInfo() {
+  // Get state
+  const state = document.getElementById('stateSelect').value;
+
+  output = `
+    <div class="col s12 m6">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">${states[state].name} National Guard</span>
+        </div>
+        <div class="card-action">
+          <a href="${states[state].ngUrl}" class="btn red" target="_blank" rel="noopener noreferrer">Contact</a>
+        </div>
+      </div>
+    </div>
+  `
+
+  document.getElementById('nationalGuardInfo').innerHTML += output;
+};
+
+// Listen
